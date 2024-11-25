@@ -1,10 +1,14 @@
 import * as Yup from "yup";
 
-export const validationSchema =  Yup.object({
+export const validationSchema = Yup.object({
     name: Yup.string()
-        .required("Name is required")
-        .min(3, "Name must be at least 3 characters long"),
+      .required("Name is required")
+      .min(3, "Name must be at least 3 characters long"),
     role: Yup.string()
-        .required("Role is required")
-        .min(3, "Role must be at least 3 characters long"),
-});
+      .required("Role is required")
+      .min(3, "Role must be at least 3 characters long"),
+      status: Yup.string()
+      .required("Status is required")
+      .oneOf(["Active", "Inactive"], "Invalid status value"),    
+  });
+  

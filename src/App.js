@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/Layout/Header";
 import routes from "./common/routes";
 
-function App() {
+const  App = () => {
   return (
     <Box sx={{ padding: "20px" }}>
       <Header />

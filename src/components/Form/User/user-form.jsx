@@ -1,6 +1,6 @@
 import AddIcon from "@mui/icons-material/Add";
 import { LoadingButton } from "@mui/lab";
-import { Box, Button, Stack, TextField } from "@mui/material";
+import { Box, Button, FormControlLabel, Stack, Switch, TextField } from "@mui/material";
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import { validationSchema } from "./validation-schema";
@@ -16,7 +16,8 @@ const UserForm = ({ newUser, setNewUser, handleAddUser }) => {
         resetForm();
         setNewUser({
           name: '',
-          role: ''
+          role: '',
+          status: 'Active'
         });
       }}
     >
@@ -46,6 +47,20 @@ const UserForm = ({ newUser, setNewUser, handleAddUser }) => {
               fullWidth
               error={touched.role && !!errors.role}
               helperText={touched.role && errors.role}
+            />
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={values.status === "Active"}
+                  onChange={(e) =>
+                    setFieldValue("status", e.target.checked ? "Active" : "Inactive")
+                  }
+                  name="status"
+                  aria-label="Toggle status"
+                />
+              }
+              label={`Status: ${values.status}`}
+              sx={{ marginTop: 2 }}
             />
             <Stack direction="row" spacing={2} sx={{ marginTop: 2, justifyContent: "center" }}>
               <LoadingButton

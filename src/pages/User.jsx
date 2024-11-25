@@ -11,7 +11,7 @@ const Users = () => {
 
     useEffect(() => {
         if (editingUser) {
-            setNewUser({ id: editingUser.id, name: editingUser.name, role: editingUser.role });
+            setNewUser({ id: editingUser.id, name: editingUser.name, role: editingUser.role, status: editingUser.status });
         }
     }, [editingUser]);
 
@@ -19,7 +19,7 @@ const Users = () => {
         if (editingUser) {
             setUsers((prevRoles) =>
                 prevRoles.map((u) =>
-                    u.id === editingUser.id ? { ...u, ...user, role: user.role } : u
+                    u.id === editingUser.id ? { ...u, ...user, role: user.role, status: user.status } : u
                 )
             );
             setEditingUser(null);
@@ -27,10 +27,10 @@ const Users = () => {
             const id = users.length + 1;
             setUsers((prevRoles) => [
                 ...prevRoles,
-                { id, ...user, role: user.role },
+                { id, ...user, role: user.role, status: user.status },
             ]);
         }
-        setNewUser({ name: '', role: [] });
+        setNewUser({ name: '', role: [], status: 'Active' });
     };
 
     const handleEditUser = (id) => {
