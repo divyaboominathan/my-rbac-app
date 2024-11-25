@@ -73,20 +73,19 @@ const UserForm = ({ newUser, setNewUser, handleAddUser }) => {
               >
                 {newUser.id ? 'Update User' : 'Add User'}
               </LoadingButton>
-              {newUser.id && (
-                <Button
-                  variant="contained"
-                  onClick={() => {
-                    const resetValues = { name: '', role: '', id: null };
-                    setNewUser(resetValues);
-                    setFieldValue('name', resetValues.name);
-                    setFieldValue('role', resetValues.role);
-                    setFieldValue('id', resetValues.id);
-                  }}
-                >
-                  Cancel
-                </Button>
-              )}
+              <Button
+                variant="contained"
+                onClick={() => {
+                  const resetValues = { name: '', role: '', id: null, status: 'Active' };
+                  setNewUser(resetValues);
+                  setFieldValue('name', resetValues.name);
+                  setFieldValue('role', resetValues.role);
+                  setFieldValue('id', resetValues.id);
+                  setFieldValue('status', resetValues.status);
+                }}
+              >
+                Cancel
+              </Button>
             </Stack>
           </Box>
         </Form>
