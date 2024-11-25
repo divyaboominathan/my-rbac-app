@@ -1,10 +1,11 @@
 import { Box } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Layout/Header";
 import routes from "./common/routes";
+import Header from "./components/Layout/Header";
+import HomePage from "./pages/Home";
 
-const  App = () => {
+const App = () => {
   return (
     <Box sx={{ padding: "20px" }}>
       <Header />
@@ -15,6 +16,7 @@ const  App = () => {
           padding: "10px",
         }}
       >
+        <HomePage />
         <Routes>
           {routes.map((route, index) => (
             <Route
@@ -27,6 +29,6 @@ const  App = () => {
       </Box>
     </Box>
   );
-}
+};
 
 export default App;
