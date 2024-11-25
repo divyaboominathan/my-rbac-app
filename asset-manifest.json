@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/my-rbac-app/static/css/main.1a7488ce.css",
-    "main.js": "/my-rbac-app/static/js/main.8e20ec5a.js",
+    "main.js": "/my-rbac-app/static/js/main.b3d6d915.js",
     "static/js/453.80e1942b.chunk.js": "/my-rbac-app/static/js/453.80e1942b.chunk.js",
     "index.html": "/my-rbac-app/index.html",
     "main.1a7488ce.css.map": "/my-rbac-app/static/css/main.1a7488ce.css.map",
-    "main.8e20ec5a.js.map": "/my-rbac-app/static/js/main.8e20ec5a.js.map",
+    "main.b3d6d915.js.map": "/my-rbac-app/static/js/main.b3d6d915.js.map",
     "453.80e1942b.chunk.js.map": "/my-rbac-app/static/js/453.80e1942b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a7488ce.css",
-    "static/js/main.8e20ec5a.js"
+    "static/js/main.b3d6d915.js"
   ]
 }
