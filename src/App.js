@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import routes from "./common/routes";
 import Header from "./components/Layout/Header";
-import HomePage from "./pages/Home";
 
 const App = () => {
   return (
@@ -16,7 +15,6 @@ const App = () => {
           padding: "10px",
         }}
       >
-        <HomePage />
         <Routes>
           {routes.map((route, index) => (
             <Route
